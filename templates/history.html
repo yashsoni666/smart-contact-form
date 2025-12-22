@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Message History</h2>
+
+        <table>
+            <tr>
+                <th>Message</th>
+                <th>Result</th>
+                <th>Time</th>
+            </tr>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>
+                    {% if row[1] == "spam" %}
+                        <span class="spam">SPAM</span>
+                    {% else %}
+                        <span class="ham">GENUINE</span>
+                    {% endif %}
+                </td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/">Back to Form</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Contact Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <a href="/history" style="display:block; text-align:right; margin-bottom:10px;">
+    📊 View History
+</a>
+
+        <h2>Smart Contact Form</h2>
+        <form action="/submit" method="post">
+            <textarea name="message" placeholder="Type your message..." required></textarea>
+            <button type="submit">Analyze Message</button>
+        </form>
+    </div>
+</body>
+</html>
