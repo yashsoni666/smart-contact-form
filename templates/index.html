@@ -3,15 +3,14 @@
 <head>
     <title>Smart Contact Form</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <a href="/history" style="display:block; text-align:right; margin-bottom:10px;">
-    📊 View History
-</a>
+        <a href="/history">📊 View History</a>
 
-        <h2>Smart Contact Form</h2>
+        <h2>AI Smart Contact Form</h2>
+
         <form action="/submit" method="post">
             <textarea name="message" placeholder="Type your message..." required></textarea>
             <button type="submit">Analyze Message</button>

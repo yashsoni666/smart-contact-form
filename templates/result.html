@@ -6,19 +6,18 @@
 </head>
 <body>
     <div class="container">
-        <h2>Message Analysis Result</h2>
+        <h2>Message Analysis</h2>
 
-        <p><strong>Your Message:</strong></p>
-        <p>{{ message }}</p>
+        <p style="color:white; text-align:center;">{{ message }}</p>
 
         {% if result == "spam" %}
-            <p class="spam">🚫 This message is SPAM</p>
+            <div class="spam">🚫 SPAM DETECTED</div>
         {% else %}
-            <p class="ham">✅ This message is GENUINE</p>
+            <div class="ham">✅ GENUINE MESSAGE</div>
         {% endif %}
-<a href="/history">📊 View History</a>
 
         <a href="/">Go Back</a>
+        <a href="/history">📊 View History</a>
     </div>
 </body>
 </html>
